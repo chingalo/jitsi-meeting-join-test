@@ -15,8 +15,7 @@ export class PuppeteerProcess {
 
   async startProcess() {
     const names = this.getMeetingParticipants();
-    console.log('Names:', names);
-  
+
     for (const name of names) {
       const browser = await this.createPuppeteerBrowser(false);
       const page = await browser.newPage();
